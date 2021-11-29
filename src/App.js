@@ -1,38 +1,41 @@
-import React, { Component } from "react";
-import axios from "axios";
-import Header from "./components/Header";
+import React from "react";
+import Home from "./components/Home";
+import CountryList from "./components/CountryList";
+import CountrySingle from "./components/CountrySingle";
+import {
+  BrowserRouter,
+  Link,
+  Routes,
+  Route,
+  useParams,
+} from "react-router-dom";
 
-class App extends Component {
-  state = {
-    data: [],
-    countryNames: [],
-  };
+const RouteWrapper = (props) => {
+  const params = useParams();
+  return <CountrySingle params={params} {...props} />;
+};
 
-  componentDidMount() {
-    axios.get("https://restcountries.com/v3.1/all").then((res) => {
-      this.setState({ data: res.data });
-      console.log(this.state.data);
-      this.setState({ countryNames: this.state.data.name });
-    });
-  }
-  render() {
-    return (
-      <>
-        <Header />
-        <div className="background"></div>
-        <div className="countryContainer">
-          {this.state.data.map((country) => (
-            <div className="countryname" key={country.name.common}>
-              <h2>{country.name.common} </h2>
-              <p>Capital: {country.capital}</p>
-              <img src={country.flags.png} alt="country flag svg" />
-              <p>Current Population: {country.population} </p>
-            </div>
-          ))}
-        </div>
-      </>
-    );
-  }
+function App(props) {
+  return (
+    <BrowserRouter>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/countries">Countries</Link>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        {/* <Route index element={<Home />} />   ---  can also use index instead of path*/}
+        <Route path="/" element={<Home />} />
+        <Route path="/countries" element={<CountryList />} />
+        <Route path="/countries/:name" element={<RouteWrapper />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
