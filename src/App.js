@@ -10,6 +10,8 @@ import {
   useParams,
 } from "react-router-dom";
 import Logowhite from "./assets/LogoWhite.svg";
+import Footer from "./components/Footer";
+import About from "./components/About";
 
 const RouteWrapper = (props) => {
   const params = useParams();
@@ -18,28 +20,35 @@ const RouteWrapper = (props) => {
 
 function App(props) {
   return (
-    <BrowserRouter>
-      <header>
-        <img src={Logowhite} alt="logo" />
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/countries">Countries</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <div className="background"></div>
-      <Routes>
-        {/* <Route index element={<Home />} />   ---  can also use index instead of path*/}
-        <Route path="/" element={<Home />} />
-        <Route path="/countries" element={<CountryList />} />
-        <Route path="/countries/:name" element={<RouteWrapper />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <header>
+          <img src={Logowhite} alt="logo" />
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/countries">Countries</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <div className="background"></div>
+        <Routes>
+          {/* <Route index element={<Home />} />   ---  can also use index instead of path*/}
+          <Route path="/" element={<Home />} />
+          <Route path="/countries" element={<CountryList />} />
+          <Route path="/countries/:name" element={<RouteWrapper />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
+    </div>
   );
 }
 

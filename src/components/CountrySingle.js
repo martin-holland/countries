@@ -29,9 +29,9 @@ class CountrySingle extends Component {
         weather: res[1].data,
         isLoading: false,
       });
-      console.log("response", res);
-      console.log("country data", this.state.country);
-      console.log("weather data", this.state.weather);
+      //   console.log("response", res);
+      //   console.log("country data", this.state.country);
+      //   console.log("weather data", this.state.weather);
     });
   }
 

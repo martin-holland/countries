@@ -143,6 +143,7 @@ nav ul li a {
 }
 
 .countrysingle {
+  height: 80vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -184,4 +185,8 @@ nav ul li a {
   width: 100px;
   top: -10px;
   right: -100px;
+}
+
+footer p {
+  text-align: center;
 }
