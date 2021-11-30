@@ -9,6 +9,7 @@ import {
   Route,
   useParams,
 } from "react-router-dom";
+import Logowhite from "./assets/LogoWhite.svg";
 
 const RouteWrapper = (props) => {
   const params = useParams();
@@ -18,16 +19,20 @@ const RouteWrapper = (props) => {
 function App(props) {
   return (
     <BrowserRouter>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/countries">Countries</Link>
-          </li>
-        </ul>
-      </nav>
+      <header>
+        <img src={Logowhite} alt="logo" />
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/countries">Countries</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div className="background"></div>
       <Routes>
         {/* <Route index element={<Home />} />   ---  can also use index instead of path*/}
         <Route path="/" element={<Home />} />

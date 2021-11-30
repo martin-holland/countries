@@ -16,14 +16,25 @@ body {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  opacity: 30%;
+  opacity: 15%;
   z-index: -1;
 }
 
 header {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 20px;
+}
+
+header img {
+  padding: 5px;
+  height: 40px;
 }
 
 nav {
@@ -48,17 +59,26 @@ nav ul li a {
 }
 
 .home p {
+  padding: 50px;
 }
 
 .searchdiv {
   display: flex;
+  flex-direction: column;
+  align-content: center;
   justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
 .searchdiv input {
   width: 12rem;
   padding: 0.5rem;
+}
+
+.searchdiv label {
+  padding: 0.5rem;
+  font-size: 2rem;
 }
 
 .loading {
@@ -105,7 +125,7 @@ nav ul li a {
   font-size: 1rem;
 }
 
-img {
+.countryname img {
   border-radius: 50%;
   height: 60px;
   width: 60px;
@@ -131,30 +151,37 @@ img {
 }
 
 .singleCountryCard {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  height: 300px;
-  width: 300px;
-  border: solid 1px black;
-  border-radius: 10px;
+  background-color: white;
+  border: solid black 1px;
+  margin: 0.5rem;
+  padding: 1rem;
+  position: relative;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
 }
 
 .singleCountryCard h2 {
   text-align: center;
-  width: 100%;
-  height: 3rem;
   font-weight: bold;
   display: block;
   font-size: 1.5rem;
+  padding: 10px;
   background-color: slategray;
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .singleCountryCard p {
-  padding: 20px;
+  padding: 10px;
+}
+
+.singleCountryCard img {
+  position: relative;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  top: -10px;
+  right: -100px;
 }

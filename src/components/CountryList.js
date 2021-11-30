@@ -33,7 +33,7 @@ class CountryList extends Component {
         <>
           <div className="background"></div>
           <div className="loading">
-            <div class="lds-roller">
+            <div className="lds-roller">
               <div></div>
               <div></div>
               <div></div>
@@ -52,6 +52,7 @@ class CountryList extends Component {
       <>
         <div className="background"></div>
         <div className="searchdiv">
+          <label htmlFor="search">Enter a country to filter the list</label>
           <input name="search" onChange={this.searchInputHandler} type="text" />
         </div>
         <div className="countryContainer">
