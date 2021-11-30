@@ -30,8 +30,8 @@ function CountryCard({
         </p>
         <p className="currencies">
           Currencies:{" "}
-          {currencies.map((currency) => (
-            <span>
+          {currencies.map((currency, i) => (
+            <span key={i}>
               {currency.name} {currency.symbol}
             </span>
           ))}{" "}
