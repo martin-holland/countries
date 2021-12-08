@@ -38,12 +38,7 @@ function App(props) {
             </ul>
           </nav>
         </header>
-        <div className="background">
-          <img
-            src="https://drive.google.com/uc?id=1a_0wilehGGVkEzY5TeLC8WCVL3w6aNcF"
-            alt="background"
-          />
-        </div>
+        <div className="background"></div>
         <Routes>
           {/* <Route index element={<Home />} />   ---  can also use index instead of path*/}
           <Route path="/" element={<Home />} />
