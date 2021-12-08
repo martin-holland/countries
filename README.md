@@ -24,12 +24,10 @@ Live page [here](https://github.com/margittennosaar/markdown_study_materials)
 
 ## Sources
 
-Country API - https://restcountries.com
-Weather API - https://api.openweathermap.org
+- Country API - https://restcountries.com
+- Weather API - https://api.openweathermap.org
+- Google Drive Hosting: https://daily-dev-tips.com/posts/host-images-via-google-drive/
 
 ## Authors and acknowledgment
 
-Margit Tennosaar
-
-- GitHub @margittennosaar
-- [LinkedIn](https://www.linkedin.com/in/margittennosaar/)
+- Martin Holland: https://github.com/martin-holland/
