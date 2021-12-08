@@ -39,7 +39,12 @@ class CountrySingle extends Component {
     if (this.state.isLoading) {
       return (
         <>
-          <div className="background"></div>
+          <div className="background">
+            <img
+              src="https://drive.google.com/uc?id=1a_0wilehGGVkEzY5TeLC8WCVL3w6aNcF"
+              alt="background"
+            />
+          </div>
           <div className="loading">
             <div className="lds-roller">
               <div></div>

@@ -14,7 +14,7 @@ Built with:
 
 ## Setup and usage
 
-Live page [here](https://github.com/margittennosaar/markdown_study_materials)
+<a href="">Live Page Here!</a>
 
 ## Screenshot
 
