@@ -15,7 +15,6 @@ class CountryList extends Component {
   componentDidMount() {
     axios.get(this.state.API).then((res) => {
       this.setState({ data: res.data });
-      console.log(this.state.data);
       this.setState({ countryNames: this.state.data.name });
       this.setState({ isLoading: false });
     });
