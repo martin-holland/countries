@@ -18,10 +18,14 @@ Live page [here](https://github.com/margittennosaar/markdown_study_materials)
 
 ## Screenshot
 
+![alt text](home.png?raw=true "Home Page")
+![alt text](countries.png?raw=true "Countries List")
+![alt text](singlecountry.png?raw=true "Single Country Page")
+
 ## Sources
 
-- [GitHub Guides - masterin markdown](https://guides.github.com/features/mastering-markdown/)
-- [Make a README](https://www.makeareadme.com/)
+Country API - https://restcountries.com
+Weather API - https://api.openweathermap.org
 
 ## Authors and acknowledgment
 

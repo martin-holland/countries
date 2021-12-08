@@ -12,7 +12,7 @@ function About(props) {
         pages.
       </p>
       <p>This page was created through CSS / HTML / React / npm</p>
-      <p>This page was published using netifly</p>
+      <p>This page was published using netlify</p>
     </div>
   );
 }
