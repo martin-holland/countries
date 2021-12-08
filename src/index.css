@@ -11,7 +11,7 @@ body {
 }
 
 .background {
-  /* background-image: url("https://drive.google.com/uc?id=1a_0wilehGGVkEzY5TeLC8WCVL3w6aNcF"); */
+  background-image: url("./assets/Ruby-World-Map.svg");
   background-repeat: no-repeat;
   position: fixed;
   height: 100vh;
