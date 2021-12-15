@@ -21,8 +21,8 @@ body {
 }
 
 header {
-  background-color: white;
-  height: 50px;
+  background-color: rgb(249, 210, 210);
+  height: 40px;
   width: 100vw;
   display: flex;
   position: sticky;
@@ -57,12 +57,17 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-size: 1.5rem;
+  color: black;
+}
+
+nav ul li a:hover {
+  color: White;
 }
 
 .home {
   text-align: center;
   padding: 20px;
-  height: 80vh;
+  height: 75vh;
 }
 
 .home p {
@@ -187,11 +192,23 @@ nav ul li a {
 
 .singleCountryCard img {
   position: relative;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  top: -10px;
-  right: -100px;
+}
+
+.weather {
+  text-align: center;
+  background-color: rgb(249, 231, 191);
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.countrystats {
+  text-align: center;
+  background-color: rgb(245, 184, 184);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 footer {

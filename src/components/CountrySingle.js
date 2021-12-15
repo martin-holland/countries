@@ -58,23 +58,41 @@ class CountrySingle extends Component {
     return (
       <div className="countrysingle">
         <div className="singleCountryCard">
-          <h2>{this.state.country.capital}</h2>
-          <p>Current Temperature: {this.state.weather.main.temp}</p>
-          <p>Feels like: {this.state.weather.main.feels_like} </p>
-          <img
-            alt={this.state.weather.weather[0].description}
-            src={`http://openweathermap.org/img/wn/${this.state.weather.weather[0].icon}@2x.png`}
-          />
-          <p>
-            Population:{" "}
-            {numberFormat.formatNumber(`${this.state.country.population}`)}
-          </p>
-          <p>Size: {this.state.country.area} sq m</p>
-          <p>Native Name: " {this.state.country.nativeName} "</p>
-          <p>
-            Country Region: " {this.state.country.region},{" "}
-            {this.state.country.subregion} "
-          </p>
+          <h2>{this.state.country.name}</h2>
+          <div className="weather">
+            <p>
+              Current Temperature: {Math.round(this.state.weather.main.temp)} °C
+            </p>
+            <p>
+              Feels like: {Math.round(this.state.weather.main.feels_like)} °C
+            </p>
+            <img
+              alt={this.state.weather.weather[0].description}
+              src={`http://openweathermap.org/img/wn/${this.state.weather.weather[0].icon}@2x.png`}
+            />
+          </div>
+          <div className="countrystats">
+            <p>
+              Population:{" "}
+              {numberFormat.formatNumber(`${this.state.country.population}`)}
+            </p>
+            <p>Size: {Math.round(this.state.country.area / 1000)} sq km</p>
+            <p>Native Name: " {this.state.country.nativeName} "</p>
+            <p>
+              Country Region: " {this.state.country.region},{" "}
+              {this.state.country.subregion} "
+            </p>
+            <p>
+              {" "}
+              Currencies:{" "}
+              {this.state.country.currencies.map((currency, i) => (
+                <span key={i}>
+                  {" "}
+                  {currency.name}, Symbol: {currency.symbol}
+                </span>
+              ))}{" "}
+            </p>
+          </div>
         </div>
       </div>
     );
